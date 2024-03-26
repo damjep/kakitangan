@@ -1,0 +1,12 @@
+.People-Container {
+    display: flex;
+}
+
+.data {
+    flex: 50%;
+}
+
+.newData {
+    flex: auto;
+    margin: auto;
+}
