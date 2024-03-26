@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react";
 import { useLeftData } from "./useLeft";
+import { useData } from "../fetchData/useData";
 
 export default function LeftBar() {
     const {state, setState} = useLeftData();
+    const {setNewData} = useData();
 
     useEffect(() => {
         if (state == null) {
             setState('people')
         }
+
+        else if (state) {
+            setNewData(null)
+        }
         console.log(state);
-    })
+    }, [state])
     return (<>
         <div>
-            <button onClick={()=> setState('people')}>People</button>
+            <button onClick={()=> {setState('people')}}>People</button>
             <button onClick={() => setState('films')}>Films</button>
             <button onClick={() => setState('starships')}>Starships</button>
             <button onClick={() => setState('vehicles')}>Vehicles</button>

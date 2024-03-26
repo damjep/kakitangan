@@ -1,4 +1,4 @@
-export default function People({data, newData, handleClick}) {
+export default function People({ data, newData, handleClick}) {
 
     return (<>
     <div className="People-Container">

@@ -6,12 +6,12 @@ import { useLeftData } from "../LeftBar/useLeft";
 import People from "./People";
 import { useData } from "../fetchData/useData";
 import Films from "./films";
+import Starships from "./Starships";
 
 export default function Data() {
     const { query } = useQuery();
     const {state} = useLeftData();
-    const {data} = useData();
-    const [newData, setNewData] = useState();
+    const {data, newData, setNewData} = useData();
 
     const handleClick = async (item) => {
         if (state) {
@@ -36,10 +36,10 @@ export default function Data() {
     }
 
     useEffect(() => {
-        if(data || query || state) {
+        if(state) {
             console.log('test' + data + state);
         }
-    }, [data,state,query])
+    }, [query])
 
     return (
         <>
@@ -53,6 +53,11 @@ export default function Data() {
                 {/* For Films Only */}
                 {state == 'films' && (
                     <Films data={data} newData={newData} handleClick={handleClick}/>
+                )}
+
+                {/* For Starships Only */}
+                {state === 'starships' && (
+                    <Starships data={data} newData={newData} handleClick={handleClick}/>
                 )}
                 </>
             )}

@@ -11,6 +11,7 @@ export const useData = () => {
 
 export function UseDataProvider({children}) {
     const [data , setData] = useState('');
+    const [newData, setNewData] = useState(null);
     const {query} = useQuery();
     const {state} = useLeftData();
 
@@ -31,7 +32,7 @@ export function UseDataProvider({children}) {
     }, [query, state]);
 
     return (<>
-        <useDataContext.Provider value={{data,setData}} >
+        <useDataContext.Provider value={{data,setData, newData, setNewData}} >
             {children}
         </useDataContext.Provider>
     </>)
