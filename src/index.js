@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { UseDataProvider } from './Components/fetchData/useData';
 import reportWebVitals from './reportWebVitals';
+import { QueryContextProvider } from './Components/Searchbar/SearchDataProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryContextProvider>
+      <UseDataProvider>
+        <App />
+      </UseDataProvider>  
+    </QueryContextProvider>
+       
   </React.StrictMode>
 );
 
