@@ -1,6 +1,7 @@
 import './App.css';
 import { useData } from './Components/fetchData/useData';
-import People from './Components/People/People';
+import LeftBar from './Components/LeftBar/Left';
+import Data from './Components/DisplayData/data';
 import SearchBar from './Components/Searchbar/Search';
 
 function App() {
@@ -14,7 +15,11 @@ function App() {
       <SearchBar />
     </nav>
 
-    <People />
+    <div>
+      <LeftBar />
+      <Data />
+    </div>
+    
   </>   
   );
 }

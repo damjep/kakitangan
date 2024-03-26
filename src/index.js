@@ -5,16 +5,18 @@ import App from './App';
 import { UseDataProvider } from './Components/fetchData/useData';
 import reportWebVitals from './reportWebVitals';
 import { QueryContextProvider } from './Components/Searchbar/SearchDataProvider';
+import { UseLeftDataProvider } from './Components/LeftBar/useLeft';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <UseLeftDataProvider>
     <QueryContextProvider>
       <UseDataProvider>
         <App />
       </UseDataProvider>  
     </QueryContextProvider>
-       
+    </UseLeftDataProvider>   
   </React.StrictMode>
 );
 
