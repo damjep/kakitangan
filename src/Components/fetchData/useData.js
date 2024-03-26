@@ -28,7 +28,7 @@ export function UseDataProvider({children}) {
         }
         
         fetchData();
-    }, []);
+    }, [query, state]);
 
     return (<>
         <useDataContext.Provider value={{data,setData}} >

@@ -5,6 +5,9 @@ export default function LeftBar() {
     const {state, setState} = useLeftData();
 
     useEffect(() => {
+        if (state == null) {
+            setState('people')
+        }
         console.log(state);
     })
     return (<>

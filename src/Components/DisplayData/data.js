@@ -14,7 +14,7 @@ export default function Data() {
     const [newData, setNewData] = useState();
 
     const handleClick = async (item) => {
-        if (state == 'people') {
+        if (state) {
             try {
                 const fetchedData = await Fetch(item, state);
                 setNewData(fetchedData.results[0]);
@@ -37,7 +37,7 @@ export default function Data() {
 
     useEffect(() => {
         if(data || query || state) {
-            console.log('test' + data);
+            console.log('test' + data + state);
         }
     }, [data,state,query])
 
@@ -45,8 +45,15 @@ export default function Data() {
         <>
             {data && (
                 <>
+                {/* For People Only */}
+                {state == 'people'  && (
                     <People data={data} newData={newData} handleClick={handleClick}/>
+                )}
+
+                {/* For Films Only */}
+                {state == 'films' && (
                     <Films data={data} newData={newData} handleClick={handleClick}/>
+                )}
                 </>
             )}
         </>

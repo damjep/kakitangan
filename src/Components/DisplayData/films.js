@@ -9,15 +9,6 @@ export default function Films({data, newData, handleClick}) {
                         ))}
                     </ul> )}
                 </div>
-                
-    
-                <div className="newData">
-                    { newData && (<>
-                        <p>Name: {newData.title}</p>
-                        
-                    </>
-                    )}
-                </div>
             </div>
         </>)
 }

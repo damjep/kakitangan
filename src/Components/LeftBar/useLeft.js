@@ -7,7 +7,7 @@ export const useLeftData = () => {
 }
 
 export function UseLeftDataProvider({children}) {
-    const [state, setState] = useState("");
+    const [state, setState] = useState(null);
 
     return (<>
         <useLeftContext.Provider value={{state, setState}}>
