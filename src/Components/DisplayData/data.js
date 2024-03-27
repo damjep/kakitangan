@@ -7,6 +7,8 @@ import People from "./People";
 import { useData } from "../fetchData/useData";
 import Films from "./films";
 import Starships from "./Starships";
+import Vehicles from "./vehicles";
+import Species from "./Species";
 
 export default function Data() {
     const { query } = useQuery();
@@ -15,16 +17,6 @@ export default function Data() {
 
     const handleClick = async (item) => {
         if (state) {
-            try {
-                const fetchedData = await Fetch(item, state);
-                setNewData(fetchedData.results[0]);
-                console.log(fetchedData);
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        
-        else if (state == 'films') {
             try {
                 const fetchedData = await Fetch(item, state);
                 setNewData(fetchedData.results[0]);
@@ -58,6 +50,16 @@ export default function Data() {
                 {/* For Starships Only */}
                 {state === 'starships' && (
                     <Starships data={data} newData={newData} handleClick={handleClick}/>
+                )}
+
+                 {/* For Vehicles Only */}
+                 {state === 'vehicles' && (
+                    <Vehicles data={data} newData={newData} handleClick={handleClick}/>
+                )}
+
+                {/* For Species Only */}
+                {state === 'species' && (
+                    <Species data={data} newData={newData} handleClick={handleClick}/>
                 )}
                 </>
             )}
