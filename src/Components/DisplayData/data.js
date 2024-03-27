@@ -9,6 +9,7 @@ import Films from "./films";
 import Starships from "./Starships";
 import Vehicles from "./vehicles";
 import Species from "./Species";
+import Planets from "./Planets";
 
 export default function Data() {
     const { query } = useQuery();
@@ -60,6 +61,11 @@ export default function Data() {
                 {/* For Species Only */}
                 {state === 'species' && (
                     <Species data={data} newData={newData} handleClick={handleClick}/>
+                )}
+
+                {/* For Planets Only */}
+                {state === 'planets' && (
+                    <Planets data={data} newData={newData} handleClick={handleClick}/>
                 )}
                 </>
             )}
