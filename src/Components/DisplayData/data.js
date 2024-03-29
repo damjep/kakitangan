@@ -15,6 +15,7 @@ export default function Data() {
     const { query } = useQuery();
     const {state} = useLeftData();
     const {data, newData, setNewData} = useData();
+    const {load, setLoad} = useData();
 
     const handleClick = async (item) => {
         if (state) {
@@ -29,15 +30,23 @@ export default function Data() {
     }
 
     useEffect(() => {
-        if(state) {
+        if(state || load) {
             console.log('test' + data + state);
         }
-    }, [query])
+    }, [query, load])
+
+    useEffect(() => {
+        if (newData == null || data == null) {
+            setLoad(true)
+        }
+        else {
+            setLoad(false)
+        }
+    }, [newData, data])
 
     return (
         <>
         <div className="data">
-            <h2>Results</h2>
             {data && (
                 <>
                 {/* For People Only */}
@@ -71,7 +80,10 @@ export default function Data() {
                 )}
                 </>
             )}
+
         </div>
+        <span className="loading"> {load != true ? "" : 'Loading Description'}</span>
+
         </>
     );
 }

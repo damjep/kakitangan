@@ -43,11 +43,13 @@ nav {
   height: 15%;
 }
 
-h3 {
+nav h3 {
   position: relative;
   flex: 60%;
   margin: auto;
   left: 5%;
+  font-size: 3em;
+  color: grey;
 }
 
 #search {
@@ -59,7 +61,7 @@ h3 {
 .main {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(180deg, rgb(46, 43, 43), rgb(238 , 219, 0));
+  background: linear-gradient(360deg, rgb(46, 43, 43), #fca311);
   overflow: hidden;
 }
 
@@ -70,5 +72,4 @@ h3 {
 
 .data {
   position: relative;
-  left: 5%;
 }

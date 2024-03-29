@@ -12,7 +12,6 @@ export default function Planets({ data, newData, handleClick}) {
             </div>
 
             <div className="newData">
-                <h3>Description</h3>
                 { newData && (<>
                     <p>Name: {newData.name}</p>
                     <p>Climate: {newData.climate}</p>

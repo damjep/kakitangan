@@ -14,6 +14,7 @@ export function UseDataProvider({children}) {
     const [newData, setNewData] = useState(null);
     const {query} = useQuery();
     const {state} = useLeftData();
+    const [load, setLoad] = useState(true)
 
     useEffect(() => {
         
@@ -22,9 +23,11 @@ export function UseDataProvider({children}) {
                 const fetched = await Fetch(query, state);
                 setData(fetched)
                 console.log(fetched);
+                setLoad(true)
 
             } catch(error) {
                 console.log(error);
+                setLoad(false)
             }
         }
         
@@ -32,7 +35,7 @@ export function UseDataProvider({children}) {
     }, [query, state]);
 
     return (<>
-        <useDataContext.Provider value={{data,setData, newData, setNewData}} >
+        <useDataContext.Provider value={{data,setData, newData, setNewData, load, setLoad}} >
             {children}
         </useDataContext.Provider>
     </>)
