@@ -15,7 +15,7 @@ export default function LeftBar() {
             setNewData(null)
         }
         console.log(state);
-    }, [state])
+    }, [setNewData, setState, state])
     return (<>
         <div className="leftBar">
             <button onClick={()=> {setState('people')}}>People</button>

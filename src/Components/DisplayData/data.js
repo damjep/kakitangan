@@ -33,7 +33,7 @@ export default function Data() {
         if(state || load) {
             console.log('test' + data + state);
         }
-    }, [query, load])
+    }, [query, load, state, data])
 
     useEffect(() => {
         if (newData === null || data === null) {
@@ -42,7 +42,7 @@ export default function Data() {
         else {
             setLoad(false)
         }
-    }, [newData, data])
+    }, [newData, data, setLoad])
 
     return (
         <>
