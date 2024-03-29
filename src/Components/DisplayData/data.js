@@ -50,12 +50,12 @@ export default function Data() {
             {data && (
                 <>
                 {/* For People Only */}
-                {state == 'people'  && (
+                {state === 'people'  && (
                     <People data={data} newData={newData} handleClick={handleClick}/>
                 )}
 
                 {/* For Films Only */}
-                {state == 'films' && (
+                {state === 'films' && (
                     <Films data={data} newData={newData} handleClick={handleClick}/>
                 )}
 
