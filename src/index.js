@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* Updates the Meta  Tag */}
     <Helmet>
       <title>Starwars Encyclopedia</title>
     </Helmet>
