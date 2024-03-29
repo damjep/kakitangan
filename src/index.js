@@ -6,10 +6,14 @@ import { UseDataProvider } from './Components/fetchData/useData';
 import reportWebVitals from './reportWebVitals';
 import { QueryContextProvider } from './Components/Searchbar/SearchDataProvider';
 import { UseLeftDataProvider } from './Components/LeftBar/useLeft';
+import { Helmet } from 'react-helmet';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Helmet>
+      <title>Starwars Encyclopedia</title>
+    </Helmet>
     <UseLeftDataProvider>
     <QueryContextProvider>
       <UseDataProvider>
