@@ -40,13 +40,35 @@
 nav {
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 15%;
 }
 
 h3 {
+  position: relative;
   flex: 60%;
+  margin: auto;
+  left: 5%;
 }
 
 #search {
+  position: relative;
   margin: auto;
+  right: 10%;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(46, 43, 43), rgb(238 , 219, 0));
+  overflow: hidden;
+}
+
+.leftBar {
+  position: relative;
+  left: 5%;
+}
+
+.data {
+  position: relative;
+  left: 5%;
 }

@@ -17,7 +17,7 @@ export default function LeftBar() {
         console.log(state);
     }, [state])
     return (<>
-        <div>
+        <div className="leftBar">
             <button onClick={()=> {setState('people')}}>People</button>
             <button onClick={() => setState('films')}>Films</button>
             <button onClick={() => setState('starships')}>Starships</button>

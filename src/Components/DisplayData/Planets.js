@@ -10,15 +10,9 @@ export default function Planets({ data, newData, handleClick}) {
                     ))}
                 </ul> )}
             </div>
-            
-            <div>
-                <img src="https://en.wikipedia.org/wiki/Coffee">
-
-
-                </img>
-            </div>
 
             <div className="newData">
+                <h3>Description</h3>
                 { newData && (<>
                     <p>Name: {newData.name}</p>
                     <p>Climate: {newData.climate}</p>

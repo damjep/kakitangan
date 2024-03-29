@@ -36,6 +36,8 @@ export default function Data() {
 
     return (
         <>
+        <div className="data">
+            <h2>Results</h2>
             {data && (
                 <>
                 {/* For People Only */}
@@ -69,6 +71,7 @@ export default function Data() {
                 )}
                 </>
             )}
+        </div>
         </>
     );
 }

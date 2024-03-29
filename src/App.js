@@ -10,6 +10,7 @@ function App() {
   console.log(data)
 
   return ( <>
+  <div className='main'>
     <nav>
       <h3>Star Wars Encyclopedia</h3>
       <SearchBar />
@@ -19,7 +20,7 @@ function App() {
       <LeftBar />
       <Data />
     </div>
-    
+  </div>  
   </>   
   );
 }
