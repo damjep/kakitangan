@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useLeftData } from "./useLeft";
 import { useData } from "../fetchData/useData";
 

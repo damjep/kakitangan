@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useQuery } from "../Searchbar/SearchDataProvider";
 import { Fetch } from "../fetchData/fetch";
 import "./People.css"
@@ -36,7 +36,7 @@ export default function Data() {
     }, [query, load])
 
     useEffect(() => {
-        if (newData == null || data == null) {
+        if (newData === null || data === null) {
             setLoad(true)
         }
         else {
@@ -82,7 +82,7 @@ export default function Data() {
             )}
 
         </div>
-        <span className="loading"> {load != true ? "" : 'Loading Description'}</span>
+        <span className="loading"> {load !== true ? "" : 'Loading Description'}</span>
 
         </>
     );
