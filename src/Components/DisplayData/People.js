@@ -1,6 +1,8 @@
+import { useData } from "../fetchData/useData"
+
 {/* shows data of people  */}
 export default function People({ data, newData, handleClick}) {
-
+    const {load} = useData();
     return (<>
     <div className="People-Container">
             <div className="data">
@@ -13,7 +15,7 @@ export default function People({ data, newData, handleClick}) {
             </div>
             
 
-            <div className="newData">
+            <div className={load != true ? `newData-films` : ''}>
                 { newData && (<>
                     <p>Name: {newData.name}</p>
                     <p>Birth Year: {newData.birth_year}</p>

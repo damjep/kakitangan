@@ -85,7 +85,7 @@ export default function Data() {
             )}
 
         </div>
-        <span className="loading"> {load !== true ? "" : 'Loading Description'}</span>
+        <span className="loading"> {load !== true ? "" : 'Loading Description Please Click Or Search'}</span>
 
         </>
     );

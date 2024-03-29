@@ -20,9 +20,23 @@
     background-color: #e5e5e5;
 }
 
+.newData-films {
+    position: relative;
+    flex: auto;
+    height: auto;
+    width: 60vw;
+    padding: 1em;
+    margin: 1em 2em 1em 0;
+    background-color: #e5e5e5;
+}
+
+.newData-films li {
+    font-size: large;
+}
+
 .newData p {
     font-size: 1em;
-    text-align: center;
+    text-align: left;
 }
 
 ul li {

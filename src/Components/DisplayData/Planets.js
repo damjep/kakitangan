@@ -1,7 +1,9 @@
+import { useData } from "../fetchData/useData"
+
 {/* Shows data from planets */}
 
 export default function Planets({ data, newData, handleClick}) {
-
+    const {load} = useData();
     return (<>
     <div className="People-Container">
             <div className="data">
@@ -13,7 +15,7 @@ export default function Planets({ data, newData, handleClick}) {
                 </ul> )}
             </div>
 
-            <div className="newData">
+            <div className={load != true ? `newData-films` : ''}>
                 { newData && (<>
                     <p>Name: {newData.name}</p>
                     <p>Climate: {newData.climate}</p>

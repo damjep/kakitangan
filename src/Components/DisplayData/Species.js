@@ -1,7 +1,9 @@
+import { useData } from "../fetchData/useData"
+
 {/* Shows data of species */}
 
 export default function Species({ data, newData, handleClick}) {
-
+    const {load} = useData();
     return (<>
     <div className="People-Container">
             <div className="data">
@@ -14,7 +16,7 @@ export default function Species({ data, newData, handleClick}) {
             </div>
             
 
-            <div className="newData">
+            <div className={load != true ? `newData-films` : ''}>
                 { newData && (<>
                     <p>Name: {newData.name}</p>
                     <p>Avg Height: {newData.average_height}</p>
