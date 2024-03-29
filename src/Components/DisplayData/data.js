@@ -11,6 +11,7 @@ import Vehicles from "./vehicles";
 import Species from "./Species";
 import Planets from "./Planets";
 
+{/* Shows all the data from api only shows name initially */}
 export default function Data() {
     const { query } = useQuery();
     const {state} = useLeftData();
@@ -47,6 +48,8 @@ export default function Data() {
     return (
         <>
         <div className="data">
+        {/* data is the data from api // new data is once it is clicked and will be shown */}
+
             {data && (
                 <>
                 {/* For People Only */}

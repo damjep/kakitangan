@@ -2,6 +2,8 @@ import { createContext, useContext, useState } from "react";
 
 const queryContext = createContext();
 
+{/* Sets the context for query */}
+
 export const useQuery = () => {
     return useContext(queryContext);
 }

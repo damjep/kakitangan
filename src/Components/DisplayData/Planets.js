@@ -1,3 +1,5 @@
+{/* Shows data from planets */}
+
 export default function Planets({ data, newData, handleClick}) {
 
     return (<>

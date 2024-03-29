@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useLeftData } from "./useLeft";
 import { useData } from "../fetchData/useData";
 
+{/* The Nav Bar  */}
+
 export default function LeftBar() {
     const {state, setState} = useLeftData();
     const {setNewData} = useData();

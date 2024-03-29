@@ -2,6 +2,8 @@ import { createContext, useContext, useState } from "react";
 
 const useLeftContext = createContext();
 
+{/* Sets the state of the nav bar */}
+
 export const useLeftData = () => {
     return useContext(useLeftContext)
 }

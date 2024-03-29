@@ -3,6 +3,8 @@ import { Fetch } from "./fetch";
 import { useQuery } from "../Searchbar/SearchDataProvider";
 import { useLeftData } from "../LeftBar/useLeft";
 
+{/* handles all data being fetched and stored in a context for other components to use */}
+
 const useDataContext = createContext();
 
 export const useData = () => {

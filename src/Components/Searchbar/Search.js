@@ -1,5 +1,7 @@
 import { useQuery } from "./SearchDataProvider";
 
+{/* Search Bar */}
+
 export default function SearchBar() {
     const {query, setQuery} = useQuery('');
 

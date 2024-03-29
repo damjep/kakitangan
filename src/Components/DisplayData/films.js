@@ -1,3 +1,5 @@
+{/* Shows all the data from api only shows name initially */}
+
 export default function Films({data, newData, handleClick}) {
     return (<>
         <div className="People-Container">

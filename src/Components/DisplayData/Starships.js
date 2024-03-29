@@ -1,3 +1,5 @@
+{/* Shows data of starships */}
+
 export default function Starships({data, newData, handleClick}) {
     return (<>
     <div className="People-Container">

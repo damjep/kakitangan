@@ -1,3 +1,5 @@
+{/* Shows data of species */}
+
 export default function Species({ data, newData, handleClick}) {
 
     return (<>

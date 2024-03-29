@@ -1,3 +1,5 @@
+{/* Shows data of vehicles  */}
+
 export default function Vehicles({ data, newData, handleClick}) {
 
     return (<>
